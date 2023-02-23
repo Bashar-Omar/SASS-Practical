@@ -1,0 +1,111 @@
+@import "../css/sass/helpers/variables";
+@import "../css/sass/helpers/mixins";
+
+//
+$float-left: right;
+$float-right: left;
+
+//
+$text-right: left;
+$text-left: right;
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+.header {
+  .logo {
+    .toggler {
+      right: auto;
+      left: 15px;
+    }
+    @media #{$minMedium} {
+      float: $float-left;
+      text-align: $text-left;
+    }
+  }
+  .navbar {
+    @media #{$minMedium} {
+      float: $float-left;
+    }
+    li {
+      float: $float-left;
+      @media #{$maxMobile} {
+        text-align: $text-left;
+      }
+    }
+  }
+}
+
+/* Start Services */
+.services {
+  .service-box {
+    @media #{$minMedium} {
+      float: $float-left;
+    }
+    &:not(:last-of-type) {
+      margin-left: 12px;
+      margin-right: 0px;
+    }
+  }
+}
+
+/* End Services */
+
+/* Start Our Players */
+.our-players {
+  .player-box {
+    @media #{$minSmall} {
+      float: $float-left;
+    }
+    @media #{$minMedium} {
+      text-align: $text-left;
+    }
+  }
+}
+/* End Our Players */
+
+/* Start Lorem Ipsum */
+.lorem-ipsum {
+  .lorem-box {
+    float: $float-left;
+  }
+  .lorem-box:not(:last-of-type) {
+    margin-left: 3%;
+    margin-right: 0%;
+  }
+}
+/* End Lorem Ipsum */
+
+/* Start Footer */
+.footer {
+  .gallery,
+  .info,
+  .contact {
+    float: $float-left;
+  }
+  .gallery {
+    .img-box {
+      img {
+        @media #{$minMedium} {
+          float: $float-left;
+        }
+      }
+      .text {
+        @media #{$minMedium} {
+          float: $float-left;
+        }
+      }
+    }
+  }
+  .copyright {
+    .text,
+    .author {
+      float: $float-left;
+    }
+    .author {
+      text-align: $text-right;
+    }
+  }
+}
+/* End Footer */

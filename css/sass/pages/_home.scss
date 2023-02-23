@@ -1,0 +1,167 @@
+/* Start Slider */
+.slider {
+  blockquote {
+    font: {
+      size: 20px;
+      style: italic;
+      family: Tahoma, Arial;
+    }
+    line-height: 1.7;
+    text-align: center;
+    color: #5e5e5e;
+    width: 80%;
+    margin: 30px auto;
+  }
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 550px;
+  }
+  .bullets {
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+    li {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-color: $greyColor;
+      border-radius: 50%;
+      @include prefixer(transition, $fourTransition, webkit moz);
+      &.actvie,
+      &:hover {
+        background-color: #cacaca;
+      }
+    }
+  }
+}
+/* End Slider */
+
+blockquote {
+  @media #{$maxMobile} {
+    display: none;
+  }
+}
+
+.slider img {
+  @media #{$maxMobile} {
+    margin-top: 30px;
+  }
+}
+/* Start Services */
+.services {
+  .service-box {
+    background-color: #eee;
+    padding: 30px;
+    text-align: center;
+    &:not(:last-of-type) {
+      padding-right: 20px;
+      margin-right: 12px;
+      margin-bottom: 20px;
+    }
+    &:hover {
+      background-color: rgb(219, 217, 217);
+    }
+    @media #{$minMedium} {
+      width: (100% / 3.1);
+      float: $float-left;
+    }
+    @media #{$maxMobile} {
+      width: 100%;
+      float: none;
+      i {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+    @include prefixer(transition, $fourTransition, webkit moz);
+    .services-title {
+      i {
+        padding: 0px 10px;
+        color: $redColor;
+      }
+    }
+    p {
+      color: #777;
+      letter-spacing: 1px;
+    }
+    a {
+      text-decoration: none;
+      color: $redColor;
+      @include prefixer(transition, $fourTransition, webkit moz);
+      &:hover {
+        color: #c5272a;
+      }
+    }
+  }
+}
+/* End Services */
+
+/* Start Our Players */
+.our-players {
+  .player-box {
+    overflow: hidden;
+    @media #{$minSmall} {
+      width: (100% / 2);
+      float: $float-left;
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+    @media #{$minMedium} {
+      width: (100% / 3);
+      text-align: $text-left;
+    }
+    @media #{$minLarge} {
+      width: (100% / 5);
+    }
+    @media #{$maxMobile} {
+      margin-bottom: 20px;
+    }
+    @include prefixer(transition, $fourTransition, webkit moz);
+    .player-title {
+      color: #666;
+      font-weight: normal;
+      span {
+        font-weight: bold;
+      }
+    }
+    p {
+      color: #777;
+      letter-spacing: 1px;
+    }
+    a {
+      text-decoration: none;
+      color: $redColor;
+      @include prefixer(transition, $fourTransition, webkit moz);
+      &:hover {
+        color: #c5272a;
+      }
+    }
+  }
+}
+/* End Our Players */
+
+/* Start Lorem Ipsum */
+.lorem-ipsum {
+  .lorem-box {
+    text-align: center;
+    @media #{$maxMobile} {
+      width: (100% / 1);
+      margin-bottom: 20px;
+    }
+    float: $float-left;
+    width: (94% / 3);
+    &:not(:last-of-type) {
+      margin-right: 3%;
+    }
+    img {
+      width: 100%;
+      @media #{$maxMobile} {
+        width: 50%;
+      }
+    }
+  }
+}
+
+/* End Lorem Ipsum */

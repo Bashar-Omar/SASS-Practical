@@ -1,0 +1,36 @@
+.footer-button {
+  background-color: rgba($redColor, 0.8);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  text-align: center;
+  min-width: 120px;
+  cursor: pointer;
+  @include prefixer(transition, $fourTransition, webkit moz);
+  &:hover {
+    background-color: $redColor;
+  }
+}
+
+.toggler {
+  background-color: rgba($redColor, 0.8);
+  border: none;
+  padding: 5px 0;
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  display: none;
+  @media #{$maxMobile} {
+    display: block;
+  }
+  cursor: pointer;
+  span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #fff;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}

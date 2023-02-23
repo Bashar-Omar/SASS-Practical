@@ -1,0 +1,123 @@
+.footer {
+  background: #e2e2e2;
+  overflow: hidden;
+  padding-top: 30px;
+  margin-top: 50px;
+  .gallery,
+  .info,
+  .contact {
+    float: $float-left;
+  }
+  .gallery {
+    width: 50%;
+    @media #{$minSmall} {
+      width: 100%;
+    }
+    @media #{$minMedium} {
+      width: 50%;
+    }
+    @media #{$maxMobile} {
+      width: 100%;
+    }
+    .img-box {
+      margin-bottom: 10px;
+      overflow: hidden;
+      img {
+        margin-bottom: 10px;
+        @media #{$minMedium} {
+          float: $float-left;
+        }
+        @media #{$maxMobile} {
+          margin-bottom: 20px;
+        }
+      }
+      .text {
+        @media #{$minMedium} {
+          float: $float-left;
+          margin-right: 15px;
+          margin-left: 15px;
+          width: calc(100% - 180px);
+        }
+        h4 {
+          color: $redColor;
+          margin: 0;
+        }
+        p {
+          color: #888;
+          line-height: 1.6;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  .info {
+    @media #{$minSmall} {
+      width: 50%;
+    }
+    @media #{$minMedium} {
+      width: 25%;
+    }
+    ul {
+      color: #888;
+      line-height: 1.6;
+    }
+    h4 {
+      color: #888;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    p {
+      color: #888;
+      margin-top: 8px;
+    }
+    a {
+      color: rgba($redColor, 0.8);
+      text-decoration: none;
+      @include prefixer(transition, $fourTransition, webkit moz);
+      &:hover {
+        color: $redColor;
+      }
+    }
+  }
+  .contact {
+    @media #{$minSmall} {
+      width: 50%;
+    }
+    @media #{$minMedium} {
+      width: 25%;
+    }
+    input,
+    textarea {
+      padding: 10px;
+      width: 100%;
+      margin-bottom: 5px;
+      border: none;
+    }
+    textarea {
+      height: 140px;
+      resize: none;
+    }
+    input:focus,
+    textarea {
+      outline: none;
+    }
+  }
+  .section-title {
+    color: #444;
+    font-weight: normal;
+  }
+  .copyright {
+    padding: 25px 0;
+    margin-top: 20px;
+    border-top: 1px solid #c5c5c5;
+    overflow: hidden;
+    .text,
+    .author {
+      float: $float-left;
+      width: 50%;
+    }
+    .author {
+      text-align: $text-right;
+    }
+  }
+}
